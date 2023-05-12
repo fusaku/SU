@@ -1,15 +1,25 @@
 spring:
+  thymeleaf:
+    mode: HTML
   datasource:
-    url: jdbc:mysql://localhost:3306/book
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/companydata?serverTimezone=JST
     username: root
     password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  thymeleaaf:
-    mode: HTML
+
+server:
+  port: 8080
+#  context-path: /api
+logging:
+  level:
+    root: info
+    com.lrm: debug
+  file: logs/debug.log
 
 mybatis:
   mapper-locations: classpath:mappers/*.xml
-  type-aliases-package: com.softusing.Jia.model
-logging:
-  level:
-    com.learn.springboot: debug
+  type-aliases-package: com.sutest512.entity
+
+
+
+
