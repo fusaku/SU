@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: dev
+
+book:
+  name: 互联网世界
+  author: 里有山
+  isbn: 123456
+  description: ${book.name}, 这本书还不错
