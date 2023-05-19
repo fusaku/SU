@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:href="http://www.w3.org/1999/xhtml">
+<head>
+  <title>登录</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container" style="max-width:600px;margin-top: 50px">
+  <h3 class="page-header">登录</h3>
+  <div class="well">
+    <form action="/result" method="get" onsubmit="return subForm()">
+      <div class="form-group">
+        <label for="usernameId">用户名</label>
+        <input type="text" name="username" id="usernameId" class="from-control">
+      </div>
+      <div class="form-group">
+        <label for="passwordId">密码</label>
+        <input type="password" name="password" id="passwordId" class="from-control">
+      </div>
+      <p class="text-center">
+        <button type="submit" class="btn btn-primary">登录</button>
+        <a class="btn btn-primary" href="http://localhost:8080/register">注册</a>
+
+      </p>
+
+    </form>
+  </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js"></script>
+</body>
+</html>

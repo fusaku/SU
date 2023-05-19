@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>books</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h2 class="page-header">用户列表</h2>
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>用户名</th>
+            <th>邮箱</th>
+            <th>电话</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user1,iterStat:${user1s}" th:class="${iterStat.even}? 'bg-success'">
+            <td th:text="${iterStat.count}">1</td>
+            <td th:text="${user1.username}">用户名</td>
+            <td th:text="${user1.email}">邮箱</td>
+            <td th:text="${user1.phone}">电话</td>
+        </tr>
+        </tbody>
+    </table>
+<!--    <nav>-->
+<!--        <ul class="pager">-->
+<!--            <li class="previous"><a href="#" th:href="@{/user1s(currPage=${page.thisPage}-1)}"-->
+<!--                                    th:unless="${page.thisPage==1}">上一页</a></li>-->
+
+<!--            <li class="next"><a href="#" th:href="@{/user1s(currPage=${page.thisPage}+1)}"-->
+<!--                                th:unless="${page.thisPage==page.totalPage}">下一页</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js"></script>
+
+</body>
+</html>
